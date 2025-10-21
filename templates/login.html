@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MindMap - Login</title>
+
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/login.css">
+
+  <style>
+ 
+    /* ---------- RESPONSIVIDADE ---------- */
+    @media (max-width: 768px) {
+      body {
+        align-items: flex-start;
+        padding-top: 20px;
+      }
+
+      .container {
+        flex-direction: column;
+        width: 95%;
+        height: auto; /* deixa o conteúdo crescer conforme necessário */
+        box-shadow: none;
+      }
+
+      .left {
+        padding: 20px;
+      }
+
+      .left img {
+        width: 160px;
+        max-width: 70%;
+        margin-top: 10px;
+      }
+
+      .right {
+        padding: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- LADO ESQUERDO -->
+    <div class="left">
+      <img src="/static/imagens/logo_afundobranco.png" alt="Logo MindMap" />
+      <h2>MindMap</h2>
+      <p>sua jornada de aprendizado virtual</p>
+    </div>
+
+    <!-- LADO DIREITO -->
+    <div class="right">
+      <h1>login</h1>
+      <form>
+        <label for="email">email</label>
+        <input type="text" id="email" name="email" placeholder="digite seu email" />
+
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" name="senha" placeholder="********" />
+
+        <button type="submit">Login</button>
+
+        <div class="links">
+          <p>Esqueceu a sua senha?</p>
+          <p>
+            <a href="cadastro.html">Inscrever-se </a>
+        </p>
+        </div>
+
+        <div class="social">
+          <p>redes sociais</p>
+          <div class="icons">
+            <a href=" https://discord.gg/D9STwGGh3" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="Discord" />
+            </a>
+
+            <a href="https://www.instagram.com/" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" />
+            </a>
+
+            <a href="https://www.facebook.com/share/1BKAteGwTk/" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" />
+            </a>
+            
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

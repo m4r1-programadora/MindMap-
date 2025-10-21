@@ -1,0 +1,201 @@
+/* ---------- CONTAINER ---------- */
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+  height: 80vh;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+/* ---------- LADO ESQUERDO (LOGO) ---------- */
+.left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  text-align: center;
+}
+
+.left img {
+  width: 220px;
+  max-width: 80%;
+  height: auto;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.left h2 {
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+.left p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #5e4a80;
+  font-weight: 500;
+}
+
+/* ---------- LADO DIREITO (LOGIN) ---------- */
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 40px;
+}
+
+.right h1 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #4a2c6d;
+}
+
+label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #8a73a1;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 15px;
+  border: none;
+  background-color: #fbeec4;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  outline: none;
+}
+
+input:focus {
+  outline: 2px solid #c9b2e8;
+  background-color: #fffbe8;
+  transition: 0.3s;
+}
+
+button {
+  width: 100%;
+  background-color: #4a2c6d;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #3a2159;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* ---------- LINKS ---------- */
+.links {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+.links a {
+  color: #4a2c6d;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s;
+}
+
+/* Sublinhado animado */
+.links a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #4a2c6d;
+  transition: width 0.3s;
+}
+
+.links a:hover {
+  color: #3a2159;
+}
+
+.links a:hover::after {
+  width: 100%;
+}
+
+/* Texto “Esqueceu a senha” */
+.esqueceu-senha {
+  color: #4a2c6d;
+  font-weight: 600;
+  position: relative;
+  text-decoration: underline dotted; /* detalhe sutil */
+  cursor: default; /* não é link */
+}
+
+/* ---------- REDES SOCIAIS ---------- */
+.social {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.social p {
+  font-size: 12px;
+  color: #8a73a1;
+  margin-bottom: 10px;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.icons img {
+  width: 28px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.icons img:hover {
+  transform: scale(1.1);
+}
+
+/* ---------- RESPONSIVIDADE ---------- */
+@media (max-width: 768px) {
+  body {
+    align-items: flex-start;
+    padding-top: 20px;
+  }
+
+  .container {
+    flex-direction: column;
+    width: 95%;
+    height: auto; 
+    box-shadow: none;
+  }
+
+  .left {
+    padding: 20px;
+  }
+
+  .left img {
+    width: 160px;
+    max-width: 70%;
+    margin-top: 10px;
+  }
+
+  .right {
+    padding: 30px;
+  }
+}
