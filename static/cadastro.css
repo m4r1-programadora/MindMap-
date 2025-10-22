@@ -1,0 +1,166 @@
+/* ---------- LAYOUT PRINCIPAL ---------- */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6f1fc;
+  color: #3e2758;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+  height: 600px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+
+/* ---------- LADO ESQUERDO ---------- */
+.left {
+  flex: 1;
+  background-color: #a885b9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.logo-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.logo-circle img {
+  max-width: 90%;
+  max-height: 90%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+
+
+
+/* ---------- LADO DIREITO ---------- */
+.right {
+  flex: 1;
+  background-color: #fbf8ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px 60px;
+}
+
+.right h1 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #3e2758;
+  text-transform: uppercase;
+}
+
+.subtext {
+  font-size: 13px;
+  color: #8a73a1;
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+
+/* ---------- LINK ESTILO (igual ao login) ---------- */
+.subtext a {
+  color: #4a2c6d;
+  font-weight: 600;
+  position: relative;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+/* Sublinhado animado */
+.subtext a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #4a2c6d;
+  transition: width 0.3s;
+}
+
+.subtext a:hover {
+  color: #3a2159;
+}
+
+.subtext a:hover::after {
+  width: 100%;
+}
+
+/* ---------- FORMULÁRIO ---------- */
+label {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #8a73a1;
+  margin-bottom: 5px;
+  display: block;
+}
+
+input {
+  width: 100%;
+  background-color: #fbeec4;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  background-color: #4a2c6d;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+  text-transform: lowercase;
+}
+
+button:hover {
+  background-color: #3a2159;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* ---------- RESPONSIVIDADE ---------- */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+    width: 90%;
+  }
+
+  .left {
+    padding: 40px;
+  }
+
+  .logo-circle img {
+    width: 200px; /* aumentei para manter proporcional */
+    
+  }
+
+  .right {
+    padding: 30px;
+  }
+}
