@@ -1,0 +1,38 @@
+/* ---------- CONTAINER ---------- */
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    height: 80vh;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+/* ---------- LADO DIREITO (Texto e Botões) ---------- */
+.right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    text-align: left;  /* Texto alinhado à esquerda */
+}
+
+/* ---------- LADO ESQUERDO (Imagem) ---------- */
+.left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 40px;
+}
+
+.left img {
+    width: 350px;
+    max-width: 80%;
+    height: auto;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+  
