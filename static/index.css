@@ -3,7 +3,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f2eff7;
+    background-color: git #f2eff7;
     
   }
 
@@ -113,33 +113,71 @@ body {
 }
 
 .right img {
-    width: 420px;      /* ajuste aqui para ficar exatamente como na imagem */
+    width: 430px;      /* ajuste aqui para ficar exatamente como na imagem */
     max-width: 100%;
     height: auto;
     object-fit: contain;
 }
 
-/* ---------- RESPONSIVO ---------- */
+/* ---------- RESPONSIVIDADE (CELULAR) ---------- */
 @media (max-width: 900px) {
-    .container {
-        flex-direction: column-reverse;
+
+    body {
+        display: block; /* deixa a tela rolar normalmente */
         padding: 20px;
-        text-align: center;
+    }
+
+    /* Container some no mobile */
+    .container {
+        box-shadow: none;
+        border-radius: 0;
+        height: auto;
+        flex-direction: column;
+        width: 100%;
+        max-width: none;
+        background: none;
+    }
+
+    /* Imagem vai para cima */
+    .right {
+        order: 1;
+        margin-bottom: 20px;
     }
 
     .right img {
-        width: 250px;
+        width: 180px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    /* Texto e botões abaixo */
+    .left {
+        order: 2;
+        padding: 0;
+        text-align: center;
     }
 
     .left h1 {
-        font-size: 40px;
+        font-size: 3rem;
+        padding: 0;
+        margin-bottom: 10px;
     }
 
     .left h2 {
-        font-size: 20px;
+        font-size: 1.2rem;
+        padding: 0 10px;
+        margin-top: 10px;
     }
 
     .left button {
-        width: 100%;
+        width: 230px;
+        padding: 12px;
+        font-size: 16px;
+        margin-top: 25px;
+    }
+
+    .subtext {
+        margin-top: 25px;
+        font-size: 14px;
     }
 }
