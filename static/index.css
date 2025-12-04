@@ -1,3 +1,12 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2eff7;
+    
+  }
+
 /* ---------- CONTAINER ---------- */
 .container {
     display: flex;
@@ -26,36 +35,74 @@
 
 .left h2 {
     max-width: 510px;
-    font-size: 24px;
+    font-size: 1.6rem;
     color: #3A1A53;
     font-weight: 600;
     line-height: 1.4;
     text-align: center;
     margin-top: 9rem;
+    padding: 0.5rem;
 }
 
 .left button {
     background-color: #3A1A53;
     color: white;
     border: none;
-    padding: 5%;
+    padding: 4.8%;
     border-radius: 10px;
     font-size: 18px;
-    width: 300px;
+    width: 310px;
     cursor: pointer;
     align-items: center;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .left p {
     font-size: 15px;
     color: #73638D;
+    margin-top: 0.3rem;
 }
 
 .left a {
     color: #3A1A53;
     text-decoration: none;
 }
+
+.subtext {
+    font-size: 13px;
+    color: #8a73a1;
+    margin-top: 5px;
+    margin-bottom: 30px;
+  }
+  
+  /* ---------- LINK ESTILO (igual ao login) ---------- */
+  .subtext a {
+    color: #4a2c6d;
+    font-weight: 600;
+    position: relative;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  /* Sublinhado animado */
+  .subtext a::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #4a2c6d;
+    transition: width 0.3s;
+  }
+  
+  .subtext a:hover {
+    color: #3a2159;
+  }
+  
+  .subtext a:hover::after {
+    width: 100%;
+  }
 
 /* ---------- LADO DIREITO (Imagem da Coruja) ---------- */
 .right {
@@ -66,7 +113,7 @@
 }
 
 .right img {
-    width: 380px;      /* ajuste aqui para ficar exatamente como na imagem */
+    width: 420px;      /* ajuste aqui para ficar exatamente como na imagem */
     max-width: 100%;
     height: auto;
     object-fit: contain;

@@ -3,9 +3,10 @@
   display: flex;
   width: 100%;
   max-width: 1000px;
-  height: 80vh;
+  height: 600px;
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
 }
 
 /* ---------- LADO ESQUERDO (LOGO) ---------- */
