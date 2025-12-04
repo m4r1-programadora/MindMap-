@@ -12,21 +12,21 @@
     <div class="container"> 
 
         <!-- LADO ESQUERDO (Texto e Botões) -->
-        <div class="right">
+        <div class="left">
             <h1>MindMap+</h1>
             <h2>conecte ideias, aprofunde saberes e aprenda com mais qualidade.</h2>
 
-            <a href="login.html">
+            <a href="{{ url_for('login') }}">
                 <button>fazer login</button>
             </a>
 
             <p>ainda não tem login?
-                <a href="cadastro.html">fazer cadastro</a>
-            </p>
+                <a href="{{ url_for('cadastro') }}">fazer cadastro</a>
+
         </div>
 
         <!-- LADO DIREITO (Imagem) -->
-        <div class="left"> 
+        <div class="right">
             <img src="/static/imagens/logo_roxa700.png" alt="Logo MindMap+" />
         </div>
 

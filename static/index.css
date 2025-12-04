@@ -3,36 +3,96 @@
     display: flex;
     width: 100%;
     max-width: 1000px;
-    height: 80vh;
+    height: 600px;
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
-}
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  }
 
-/* ---------- LADO DIREITO (Texto e Botões) ---------- */
-.right {
+/* ---------- LADO ESQUERDO (Texto e Botões) ---------- */
+.left {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 40px;
-    text-align: left;  /* Texto alinhado à esquerda */
+    align-items: center;
 }
 
-/* ---------- LADO ESQUERDO (Imagem) ---------- */
-.left {
+.left h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    color: #3A1A53;
+    padding: 4rem;
+}
+
+.left h2 {
+    max-width: 510px;
+    font-size: 24px;
+    color: #3A1A53;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: center;
+    margin-top: 9rem;
+}
+
+.left button {
+    background-color: #3A1A53;
+    color: white;
+    border: none;
+    padding: 5%;
+    border-radius: 10px;
+    font-size: 18px;
+    width: 300px;
+    cursor: pointer;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.left p {
+    font-size: 15px;
+    color: #73638D;
+}
+
+.left a {
+    color: #3A1A53;
+    text-decoration: none;
+}
+
+/* ---------- LADO DIREITO (Imagem da Coruja) ---------- */
+.right {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 60px 40px;
 }
 
-.left img {
-    width: 350px;
-    max-width: 80%;
+.right img {
+    width: 380px;      /* ajuste aqui para ficar exatamente como na imagem */
+    max-width: 100%;
     height: auto;
-    border-radius: 50%;
     object-fit: contain;
 }
 
-  
+/* ---------- RESPONSIVO ---------- */
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column-reverse;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .right img {
+        width: 250px;
+    }
+
+    .left h1 {
+        font-size: 40px;
+    }
+
+    .left h2 {
+        font-size: 20px;
+    }
+
+    .left button {
+        width: 100%;
+    }
+}
