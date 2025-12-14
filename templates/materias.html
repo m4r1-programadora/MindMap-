@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="welcome-card">
+    <div class="welcome-text">
+        <h2>Olá, Maria 👋</h2>
+        <p>Pronta para começar seus estudos hoje?</p>
+    </div>
+
+    <div class="welcome-image">
+        <img src="{{ url_for('static', filename='imagens/corujaroxacom+.png') }}" alt="Estudando">
+    </div>
+</div>
+
+<h1>Matérias</h1>
+
+<div class="card">
+    <h2>Física</h2>
+    <p>Resumos e mapas mentais sobre ondulatória, eletrodinâmica e muito mais.</p>
+</div>
+
+<div class="card">
+    <h2>Biologia</h2>
+    <p>Mapas mentais sobre citologia, metabolismo energético e conteúdos relacionados.</p>
+</div>
+{% endblock %}
