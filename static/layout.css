@@ -23,15 +23,15 @@ body {
 .logo-area {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 2px;
     color: #2E1A47;
     font-size: 22px;
     font-weight: bold;
-    margin-bottom: 50px;
+    margin-bottom: 8rem;
 }
 
 .logo-area img {
-    width: 3rem;
+    width: 3.5rem;
 }
 
 /* MENU */
@@ -43,6 +43,7 @@ body {
 
 .menu li {
     margin: 20px 0;
+    margin-bottom: 2rem;
 }
 
 .menu li a {
@@ -60,12 +61,20 @@ body {
     opacity: 0.8;
 }
 
+.menu li a img {
+    width: 2.2rem;
+    height: 2.2rem;
+}
+
 /* BOTÃO SAIR */
 .menu .sair {
     position: absolute;
     bottom: 20px;
     left: 20px;
 }
+
+
+
 
 /* ▬▬▬▬▬▬▬▬ CONTEÚDO ▬▬▬▬▬▬▬▬ */
 
@@ -76,7 +85,7 @@ body {
     margin-right: 3%;
     background-color: #FDFBFF;
     border-radius: 28px;
-    padding: 40px 100px;
+    padding: 40px 30px;
 
     width: 85%;
     max-width: none;                
@@ -114,7 +123,7 @@ h1 {
 .welcome-card {
     background-color: #E6DDF3;
     border-radius: 18px;
-    padding: 20px 40px;
+    padding-left: 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -137,7 +146,7 @@ h1 {
 }
 
 .welcome-image img {
-    width: 180px;
+    width: 170px;
 }
 
 /* ▬▬▬▬▬▬▬▬ LISTA DE EXERCÍCIOS ▬▬▬▬▬▬▬▬ */
