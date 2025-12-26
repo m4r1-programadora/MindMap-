@@ -1,13 +1,15 @@
 /* RESET */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #F6F3F9;
+    font-family: 'Poppins', sans-serif;
+    background-color: #A783B5;
 }
 
 /* ▬▬▬▬▬▬▬▬ SIDEBAR ▬▬▬▬▬▬▬▬ */
 .sidebar {
-    width: 250px;
+    width: 15%;
     height: 100vh;
     background-color: #A783B5;
     padding: 25px 20px;
@@ -22,14 +24,14 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: white;
+    color: #2E1A47;
     font-size: 22px;
     font-weight: bold;
     margin-bottom: 50px;
 }
 
 .logo-area img {
-    width: 40px;
+    width: 3rem;
 }
 
 /* MENU */
@@ -44,7 +46,11 @@ body {
 }
 
 .menu li a {
-    color: white;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: #2E1A47;
     text-decoration: none;
     font-size: 18px;
     transition: opacity 0.2s;
@@ -62,13 +68,24 @@ body {
 }
 
 /* ▬▬▬▬▬▬▬▬ CONTEÚDO ▬▬▬▬▬▬▬▬ */
-.content {
-    margin-left: 250px;                 /* espaço da sidebar */
-    width: calc(100vw - 250px);         /* ocupa TODO o resto da tela */
-    min-height: 100vh;
-    padding: 40px;
+
+
+/* CONTAINER BRANCO */
+.container {
+    margin-left: 17%;
+    margin-right: 3%;
+    background-color: #FDFBFF;
+    border-radius: 28px;
+    padding: 40px 100px;
+
+    width: 85%;
+    max-width: none;                
+
     box-sizing: border-box;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }
+
+
 
 /* TÍTULOS */
 h1 {
@@ -86,7 +103,6 @@ h1 {
     color: white;
 
     width: 100%;
-    max-width: none;          /* SEM limite */
     box-sizing: border-box;
 }
 
@@ -98,20 +114,19 @@ h1 {
 .welcome-card {
     background-color: #E6DDF3;
     border-radius: 18px;
-    padding: 30px 40px;
+    padding: 20px 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 40px;
 
     width: 100%;
-    max-width: none;
     box-sizing: border-box;
 }
 
 .welcome-text h2 {
     margin: 0;
-    font-size: 28px;
+    font-size: 2rem;
     color: #2E1A47;
 }
 
@@ -148,4 +163,17 @@ h1 {
 
 .lista-exercicios a:hover {
     background-color: #E6DFF0;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+    .content {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .content-container {
+        padding: 25px;
+        border-radius: 18px;
+    }
 }

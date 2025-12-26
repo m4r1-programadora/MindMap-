@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>MindMap+</title>
+
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='layout.css') }}">
 </head>
@@ -24,13 +25,12 @@
             <li class="sair">
                 <a href="{{ url_for('logout') }}">Sair</a>
             </li>
-
         </ul>
     </div>
 
     <!-- CONTEÚDO -->
-    <div class="content">
-        {% block content %}{% endblock %}
+    <div class="container">
+            {% block content %}{% endblock %}
     </div>
 
 </body>
