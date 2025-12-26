@@ -63,10 +63,12 @@ body {
 
 /* ▬▬▬▬▬▬▬▬ CONTEÚDO ▬▬▬▬▬▬▬▬ */
 .content {
-    margin-top: 250px;
+    margin-left: 250px;                 /* espaço da sidebar */
+    width: calc(100vw - 250px);         /* ocupa TODO o resto da tela */
+    min-height: 100vh;
+    padding: 40px;
     box-sizing: border-box;
 }
-
 
 /* TÍTULOS */
 h1 {
@@ -84,15 +86,15 @@ h1 {
     color: white;
 
     width: 100%;
-    max-width: 600px;   /* largura controlada */
+    max-width: none;          /* SEM limite */
+    box-sizing: border-box;
 }
-
 
 .card h2 {
     margin-top: 0;
 }
 
-/* ▬▬▬▬▬▬▬▬ CARD DE DESTAQUE (MATÉRIAS) ▬▬▬▬▬▬▬▬ */
+/* ▬▬▬▬▬▬▬▬ CARD DE DESTAQUE (WELCOME) ▬▬▬▬▬▬▬▬ */
 .welcome-card {
     background-color: #E6DDF3;
     border-radius: 18px;
@@ -102,8 +104,8 @@ h1 {
     justify-content: space-between;
     margin-bottom: 40px;
 
-    width: 100%;          /* ocupa tudo */
-    max-width: none;      /* remove limitação */
+    width: 100%;
+    max-width: none;
     box-sizing: border-box;
 }
 
