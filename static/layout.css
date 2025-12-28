@@ -83,15 +83,19 @@ body {
 .container {
     margin-left: 17%;
     margin-right: 3%;
+
     background-color: #FDFBFF;
     border-radius: 28px;
     padding: 40px 30px;
 
     width: 85%;
-    max-width: none;                
+    height: calc(100vh - 40px); /* altura fixa baseada na tela */
 
     box-sizing: border-box;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+
+    overflow-y: auto;   /* 🔑 ativa rolagem vertical */
+    overflow-x: hidden; /* evita rolagem lateral */
 }
 
 
@@ -127,7 +131,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 
     width: 100%;
     box-sizing: border-box;
@@ -149,40 +153,4 @@ h1 {
     width: 170px;
 }
 
-/* ▬▬▬▬▬▬▬▬ LISTA DE EXERCÍCIOS ▬▬▬▬▬▬▬▬ */
-.lista-exercicios {
-    list-style: none;
-    padding: 0;
-}
 
-.lista-exercicios li {
-    margin: 10px 0;
-}
-
-.lista-exercicios a {
-    display: inline-block;
-    padding: 8px 14px;
-    background-color: #F6F3F9;
-    color: #4B2C5E;
-    border-radius: 8px;
-    font-weight: 500;
-    text-decoration: none;
-    transition: 0.2s;
-}
-
-.lista-exercicios a:hover {
-    background-color: #E6DFF0;
-}
-
-/* RESPONSIVO */
-@media (max-width: 900px) {
-    .content {
-        margin-left: 0;
-        padding: 20px;
-    }
-
-    .content-container {
-        padding: 25px;
-        border-radius: 18px;
-    }
-}

@@ -1,6 +1,18 @@
 {% extends "layout.html" %}
 
 {% block content %}
+
+<div class="welcome-card">
+    <div class="welcome-text">
+        <h2>ótimo,você quer praticar! 👋</h2>
+        <p>temos listas de questões dos nossos conteúdos, selecionados para você</p>
+    </div>
+
+    <div class="welcome-image">
+        <img src="{{ url_for('static', filename='imagens/corujaroxacom+.png') }}" alt="Estudando">
+    </div>
+</div>
+
 <h1>Exercícios</h1>
 
 <div class="card">

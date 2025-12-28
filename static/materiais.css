@@ -1,0 +1,42 @@
+/* CARD DE MATÉRIA */
+.materia-card {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    background-color: #B6A0C8;
+    border-radius: 18px;
+    padding: 30px 40px;
+    margin-bottom: 20px;
+
+    text-decoration: none;
+    color: #2E1A47;
+
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.materia-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* IMAGEM DA MATÉRIA */
+.materia-card img {
+    width: 110px;
+    height: auto;
+}
+
+/* TEXTO */
+.materia-texto h2 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.materia-texto p {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #4B2C5E;
+    max-width: 600px;
+}

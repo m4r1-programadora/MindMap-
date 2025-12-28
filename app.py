@@ -14,9 +14,9 @@ def login():
 def cadastro():
     return render_template("cadastro.html")
 
-@app.route("/materias")
-def materias():
-    return render_template("materias.html")
+@app.route("/materiais")
+def materiais():
+    return render_template("materiais.html")
 
 @app.route("/exercicios")
 def exercicios():

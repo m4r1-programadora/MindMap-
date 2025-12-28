@@ -1,0 +1,24 @@
+/* ▬▬▬▬▬▬▬▬ LISTA DE EXERCÍCIOS ▬▬▬▬▬▬▬▬ */
+.lista-exercicios {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-exercicios li {
+    margin: 10px 0;
+}
+
+.lista-exercicios a {
+    display: inline-block;
+    padding: 8px 14px;
+    background-color: #F6F3F9;
+    color: #4B2C5E;
+    border-radius: 8px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.lista-exercicios a:hover {
+    background-color: #E6DFF0;
+}
