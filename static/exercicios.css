@@ -1,24 +1,64 @@
-/* ▬▬▬▬▬▬▬▬ LISTA DE EXERCÍCIOS ▬▬▬▬▬▬▬▬ */
+/* ▬▬▬▬▬▬▬▬ GRID DE EXERCÍCIOS ▬▬▬▬▬▬▬▬ */
+.exercicios-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+/* CARD INDIVIDUAL */
+.card-exercicio {
+    background-color: #B29CBC;
+    border-radius: 18px;
+    padding: 30px;
+    position: relative;
+    min-height: 260px;
+    box-sizing: border-box;
+}
+
+/* TÍTULO */
+.card-exercicio h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #4B2C5E;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+/* LISTA */
 .lista-exercicios {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .lista-exercicios li {
-    margin: 10px 0;
+    margin-bottom: 14px;
 }
 
+/* LINKS */
 .lista-exercicios a {
-    display: inline-block;
-    padding: 8px 14px;
-    background-color: #F6F3F9;
     color: #4B2C5E;
-    border-radius: 8px;
+    font-size: 17px;
     font-weight: 500;
     text-decoration: none;
-    transition: 0.2s;
 }
 
 .lista-exercicios a:hover {
-    background-color: #E6DFF0;
+    text-decoration: underline;
+}
+
+/* ÍCONE NO CANTO */
+.icon-card {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 70px;
+    opacity: 0.7;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+    .exercicios-grid {
+        grid-template-columns: 1fr;
+    }
 }
