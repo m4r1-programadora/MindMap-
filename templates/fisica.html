@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h1> Física — Mapas Mentais</h1>
+
+<div class="mapas-grid">
+
+    <!-- MAPA 1 -->
+    <div class="mapa-card">
+    <iframe
+        src="{{ url_for('static', filename='mapas/mapa_ondas.pdf') }}"
+        loading="lazy">
+    </iframe>
+
+    <h3>Ondulatória</h3>
+
+    <div class="acoes">
+        <a href="{{ url_for('static', filename='mapas/mapa_ondas.pdf') }}" target="_blank">
+             Tela cheia
+        </a>
+
+        <a href="{{ url_for('static', filename='mapas/mapa_ondas.pdf') }}"
+           download="Mapa_Ondulatoria.pdf">
+            Download
+        </a>
+    </div>
+</div>
+
+
+    <!-- MAPA 2 -->
+    <div class="mapa-card">
+        <iframe 
+            src="{{ url_for('static', filename='pdfs/fisica/eletrodinamica.pdf') }}">
+        </iframe>
+
+        <h3>Eletrodinâmica</h3>
+
+        <div class="acoes">
+            <a href="{{ url_for('static', filename='mapa/fisica/eletrodinamica.pdf') }}" target="_blank">
+                Tela cheia
+            </a>
+
+            <a href="{{ url_for('static', filename='pdfs/fisica/eletrodinamica.pdf') }}"
+               download="Mapa_Eletrodinamica.pdf">
+                Download
+            </a>
+        </div>
+    </div>
+
+    <!-- MAPA 3 -->
+    <div class="mapa-card">
+        <iframe 
+            src="{{ url_for('static', filename='pdfs/fisica/eletrodinamica.pdf') }}">
+        </iframe>
+
+        <h3>cinemática</h3>
+
+        <div class="acoes">
+            <a href="{{ url_for('static', filename='mapa/fisica/eletrodinamica.pdf') }}" target="_blank">
+                 Tela cheia
+            </a>
+
+            <a href="{{ url_for('static', filename='pdfs/fisica/eletrodinamica.pdf') }}"
+               download="Mapa_Eletrodinamica.pdf">
+                 Download
+            </a>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

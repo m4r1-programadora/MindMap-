@@ -1,27 +1,68 @@
 /* ▬▬▬▬▬▬▬▬ GRID DE EXERCÍCIOS ▬▬▬▬▬▬▬▬ */
 .exercicios-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 45px;
+    margin-top: 40px;
 }
 
-/* CARD INDIVIDUAL */
+/* CARD */
 .card-exercicio {
-    background-color: #B29CBC;
-    border-radius: 18px;
-    padding: 30px;
     position: relative;
-    min-height: 260px;
-    box-sizing: border-box;
+    border-radius: 26px;
+    padding: 34px 34px 40px;
+    min-height: 300px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(178, 156, 188, 0.95),
+        rgba(200, 182, 212, 0.9)
+    );
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 25px 50px rgba(0, 0, 0, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.25);
+
+    overflow: hidden;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* brilho animado */
+.card-exercicio::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        120deg,
+        transparent 30%,
+        rgba(255, 255, 255, 0.25),
+        transparent 70%
+    );
+    transform: translateX(-100%);
+    transition: transform 0.8s ease;
+}
+
+.card-exercicio:hover::before {
+    transform: translateX(100%);
+}
+
+.card-exercicio:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow:
+        0 35px 70px rgba(0, 0, 0, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
 /* TÍTULO */
 .card-exercicio h2 {
-    margin-top: 0;
-    margin-bottom: 20px;
-    color: #4B2C5E;
-    font-size: 22px;
-    font-weight: 600;
+    margin: 0 0 22px;
+    font-size: 26px;
+    font-weight: 800;
+    color: #2E1A47;
+    letter-spacing: 0.8px;
 }
 
 /* LISTA */
@@ -32,33 +73,78 @@
 }
 
 .lista-exercicios li {
-    margin-bottom: 14px;
+    margin-bottom: 16px;
 }
 
 /* LINKS */
 .lista-exercicios a {
-    color: #4B2C5E;
-    font-size: 17px;
-    font-weight: 500;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    padding: 12px 18px;
+    border-radius: 14px;
+
+    font-size: 16px;
+    font-weight: 600;
+    color: #3A1F57;
     text-decoration: none;
+
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow:
+        inset 0 0 0 1px rgba(255, 255, 255, 0.35),
+        0 6px 14px rgba(0, 0, 0, 0.12);
+
+    transition: all 0.25s ease;
 }
 
+/* ícone */
+/* base do ícone */
+.lista-exercicios a::before {
+    content: "";
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* FÍSICA */
+.lista-exercicios.fisica a::before {
+    background-image: url("/static/icon/icon_fisica.png");
+}
+
+/* MATEMÁTICA */
+.lista-exercicios.matematica a::before {
+    background-image: url("/static/icon/icon_matematica.png");
+}
+
+
+/* hover dos links */
 .lista-exercicios a:hover {
-    text-decoration: underline;
+    background: rgba(255, 255, 255, 0.55);
+    transform: translateX(10px);
+    box-shadow:
+        inset 0 0 0 1px rgba(255, 255, 255, 0.5),
+        0 10px 20px rgba(0, 0, 0, 0.18);
 }
 
-/* ÍCONE NO CANTO */
+/* ÍCONE DECORATIVO */
 .icon-card {
     position: absolute;
     bottom: 20px;
     right: 20px;
-    width: 70px;
-    opacity: 0.7;
+    width: 80px;
+    opacity: 0.15;
 }
 
 /* RESPONSIVO */
 @media (max-width: 900px) {
     .exercicios-grid {
         grid-template-columns: 1fr;
+        gap: 30px;
     }
 }

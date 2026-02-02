@@ -18,6 +18,14 @@ def cadastro():
 def materiais():
     return render_template("materiais.html")
 
+@app.route("/materia/fisica")
+def fisica():
+    return render_template("fisica.html")
+
+@app.route("/materia/matematica")
+def matematica():
+    return render_template("matematica.html")
+
 @app.route("/exercicios")
 def exercicios():
     return render_template("exercicios.html")

@@ -1,4 +1,4 @@
-/* CARD DE MATÉRIA */
+/* ▬▬▬▬▬▬▬▬ CARD DE MATÉRIA ▬▬▬▬▬▬▬▬ */
 .materia-card {
     display: flex;
     align-items: center;
@@ -12,12 +12,34 @@
     text-decoration: none;
     color: #2E1A47;
 
-    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    overflow: hidden;
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.materia-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        120deg,
+        transparent 30%,
+        rgba(255, 255, 255, 0.25),
+        transparent 70%
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.materia-card:hover::after {
+    opacity: 1;
 }
 
 .materia-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+    transform: translateY(-6px);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.18);
 }
 
 /* IMAGEM DA MATÉRIA */
@@ -39,4 +61,110 @@
     font-size: 14px;
     color: #4B2C5E;
     max-width: 600px;
+}
+
+/* ▬▬▬▬▬▬▬▬ GRID DE MAPAS ▬▬▬▬▬▬▬▬ */
+.mapas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* CARD DO MAPA */
+.mapa-card {
+    background-color: #EFE7F5;
+    border-radius: 16px;
+    padding: 15px;
+
+    position: relative;
+    overflow: hidden;
+
+    box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.mapa-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        120deg,
+        transparent 35%,
+        rgba(255, 255, 255, 0.35),
+        transparent 70%
+    );
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+    pointer-events: none;
+}
+
+.mapa-card:hover::before {
+    transform: translateX(100%);
+}
+
+.mapa-card:hover {
+    transform: translateY(-6px) scale(1.015);
+    box-shadow: 0 16px 32px rgba(0,0,0,0.18);
+}
+
+/* PRÉ-VISUALIZAÇÃO PDF */
+.mapa-card iframe {
+    width: 100%;
+    height: 190px;
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.mapa-card:hover iframe {
+    transform: scale(1.02);
+}
+
+/* TÍTULO DO MAPA */
+.mapa-card h3 {
+    margin: 12px 0 8px;
+    color: #3B1E5A;
+}
+
+/* ▬▬▬▬▬▬▬▬ AÇÕES ▬▬▬▬▬▬▬▬ */
+.acoes {
+    display: flex;
+    justify-content: space-between;
+}
+
+.acoes a {
+    text-decoration: none;
+    background-color: #6A3FA0;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+
+    position: relative;
+    overflow: hidden;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.acoes a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.25);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.acoes a:hover::after {
+    opacity: 1;
+}
+
+.acoes a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+}
+
+.acoes a:active {
+    transform: scale(0.96);
 }
