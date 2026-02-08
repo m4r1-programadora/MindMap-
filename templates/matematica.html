@@ -2,25 +2,36 @@
 
 {% block content %}
 
-<h1> Física — Mapas Mentais</h1>
+<div class="welcome-card">
+    <div class="welcome-text">
+        <h2>>Precisando de ajuda em matemática?!  </h2>
+        <p>Aproveite nossos mapas de matemática, espero que te ajudem a aprender!</p>
+    </div>
+
+    <div class="welcome-image">
+        <img src="{{ url_for('static', filename='imagens/corujaroxacom+.png') }}" alt="Estudando">
+    </div>
+</div>
+
+<h1> MATEMÁTICA — Mapas Mentais</h1>
 
 <div class="mapas-grid">
 
     <!-- MAPA 1 -->
     <div class="mapa-card">
     <iframe
-        src="{{ url_for('static', filename='mapas/mapa_ondas.pdf') }}"
+        src="{{ url_for('static', filename='mapas/mapa_porcentagem.pdf') }}"
         loading="lazy">
     </iframe>
 
-    <h3>Função</h3>
+    <h3>Porcentagem</h3>
 
     <div class="acoes">
-        <a href="{{ url_for('static', filename='mapas/mapa_ondas.pdf') }}" target="_blank">
+        <a href="{{ url_for('static', filename='mapas/mapa_porcentagem.pdf') }}" target="_blank">
              Tela cheia
         </a>
 
-        <a href="{{ url_for('static', filename='mapas/mapa_ondas.pdf') }}"
+        <a href="{{ url_for('static', filename='mapas/mapa_porcentagem.pdf') }}"
            download="Mapa_Ondulatoria.pdf">
             Download
         </a>
@@ -28,44 +39,24 @@
 </div>
 
 
-    <!-- MAPA 2 -->
+     <!-- MAPA 1 -->
     <div class="mapa-card">
-        <iframe 
-            src="{{ url_for('static', filename='pdfs/fisica/eletrodinamica.pdf') }}">
+        <iframe
+            src="{{ url_for('static', filename='mapas/mapa_geometriaplana.pdf') }}"
+            loading="lazy">
         </iframe>
 
-        <h3>Permutação</h3>
+        <h3>Geometria plana</h3>
 
         <div class="acoes">
-            <a href="{{ url_for('static', filename='mapa/fisica/eletrodinamica.pdf') }}" target="_blank">
-                 Tela cheia
+            <a href="{{ url_for('static', filename='mapas/mapa_geometriaplana.pdf') }}" target="_blank">
+                Tela cheia
             </a>
 
-            <a href="{{ url_for('static', filename='pdfs/fisica/eletrodinamica.pdf') }}"
-               download="Mapa_Eletrodinamica.pdf">
-                 Download
+            <a href="{{ url_for('static', filename='mapas/mapa_geometriaplana.pdf') }}"
+            download="Mapa_Ondulatoria.pdf">
+                Download
             </a>
-        </div>
-    </div>
-
-    <!-- MAPA 3-->
-    <div class="mapa-card">
-        <iframe 
-            src="{{ url_for('static', filename='pdfs/fisica/eletrodinamica.pdf') }}">
-        </iframe>
-
-        <h3>Geometria</h3>
-
-        <div class="acoes">
-            <a href="{{ url_for('static', filename='mapa/fisica/eletrodinamica.pdf') }}" target="_blank">
-                 Tela cheia
-            </a>
-
-            <a href="{{ url_for('static', filename='pdfs/fisica/eletrodinamica.pdf') }}"
-               download="Mapa_Eletrodinamica.pdf">
-                 Download
-            </a>
-        </div>
     </div>
 
 </div>

@@ -26,8 +26,12 @@
                 </a>
             </li>
 
-            <li><a href="#">Eletrodinâmica</a></li>
-            <li><a href="#">Cinemática</a></li>
+            <li>
+                <a href="{{ url_for('static', filename='questoes/questoes_cinematica.pdf') }}" target="_blank">
+                    Cinemática
+                </a>
+            </li>
+           
         </ul>
 
         <img class="icon-card"
@@ -40,9 +44,18 @@
         <h2>MATEMÁTICA</h2>
 
         <ul class="lista-exercicios matematica">
-            <li><a href="#">Função</a></li>
-            <li><a href="#">Permutação</a></li>
-            <li><a href="#">Geometria</a></li>
+            <li>
+                <a href="{{ url_for('static', filename='questoes/questoes_porcentagem.pdf') }}" target="_blank">
+                    Porcentagem
+                </a>
+            </li>
+
+           <li>
+                <a href="{{ url_for('static', filename='questoes/questoes_geometriaplana.pdf') }}" target="_blank">
+                    Geometria plana
+                </a>
+            </li>
+            
         </ul>
 
         <img class="icon-card"

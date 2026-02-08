@@ -2,6 +2,17 @@
 
 {% block content %}
 
+<div class="welcome-card">
+    <div class="welcome-text">
+        <h2>>Que bom ver você estudando Física! 🚀 </h2>
+        <p>Aqui ficam os nossos mapas de física, espero que te ajudem a aprender!</p>
+    </div>
+
+    <div class="welcome-image">
+        <img src="{{ url_for('static', filename='imagens/corujaroxacom+.png') }}" alt="Estudando">
+    </div>
+</div>
+
 <h1> Física — Mapas Mentais</h1>
 
 <div class="mapas-grid">
@@ -49,25 +60,7 @@
         </div>
     </div>
 
-    <!-- MAPA 3 -->
-    <div class="mapa-card">
-        <iframe 
-            src="{{ url_for('static', filename='pdfs/fisica/eletrodinamica.pdf') }}">
-        </iframe>
-
-        <h3>cinemática</h3>
-
-        <div class="acoes">
-            <a href="{{ url_for('static', filename='mapa/fisica/eletrodinamica.pdf') }}" target="_blank">
-                 Tela cheia
-            </a>
-
-            <a href="{{ url_for('static', filename='pdfs/fisica/eletrodinamica.pdf') }}"
-               download="Mapa_Eletrodinamica.pdf">
-                 Download
-            </a>
-        </div>
-    </div>
+    
 
 </div>
 

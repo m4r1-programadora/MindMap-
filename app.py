@@ -1,4 +1,7 @@
-from flask import Flask, render_template, redirect, url_for
+from flask import Flask, render_template, redirect, url_for, request
+
+import bcrypt
+from supabase_service import supabase
 
 app = Flask(__name__)
 
@@ -6,12 +9,55 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
-@app.route("/login")
+@app.route("/login", methods=["GET", "POST"])
 def login():
+
+    global current_user
+    if request.method == 'POST':
+
+        email = request.form.get("email")
+        senha = request.form.get("senha").encode("utf-8")
+
+        result = supabase.table('usuarios').select("*").eq("email", email).execute()
+        if result.data:
+            senha_hash = result.data[0]["senha"].encode("utf-8")
+            if bcrypt.checkpw(senha, senha_hash):
+                current_user = email
+                return redirect(url_for("materiais"))
+            else:
+                print("erro")
     return render_template("login.html")
 
-@app.route("/cadastro")
+@app.route("/cadastro", methods=["GET", "POST"])
 def cadastro():
+    if request.method == 'POST':
+        nome = request.form.get('nome')
+        nome_usuario = request.form.get('nick')
+        email = request.form.get('email')
+        senha = request.form.get('senha')
+
+        senha_hash = bcrypt.hashpw(
+            senha.encode('utf-8'),
+            bcrypt.gensalt()
+        ).decode('utf-8')
+
+        exists = supabase.table("usuarios") \
+            .select("*") \
+            .eq("email", email) \
+            .execute()
+
+        if exists.data:
+            return "Email já cadastrado"
+        else:
+            supabase.table("usuarios").insert({
+                "nome": nome,
+                "nome_usuario": nome_usuario,
+                "email": email,
+                "senha": senha_hash
+            }).execute()
+
+            return redirect(url_for("login"))
+
     return render_template("cadastro.html")
 
 @app.route("/materiais")
