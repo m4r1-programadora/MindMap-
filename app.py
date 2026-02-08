@@ -76,6 +76,11 @@ def matematica():
 def exercicios():
     return render_template("exercicios.html")
 
+@app.route("/quiz")
+def quiz():
+    return render_template("quiz.html")
+
+
 # 👉 ROTA DE SAIR (LOGOUT)
 @app.route("/logout")
 def logout():

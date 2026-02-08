@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="welcome-card">
+    <div class="welcome-text">
+        <h2>Você quer se aprofundar mesmo, hein?! </h2>
+        <p>
+            Separamos quizzes prontos na plataforma Quizlet sobre os conteúdos disponíveis.
+            Uma forma mais dinâmica de estudar — aproveite!
+        </p>
+    </div>
+
+    <div class="welcome-image">
+        <img src="{{ url_for('static', filename='imagens/corujaroxacom+.png') }}" alt="Estudando">
+    </div>
+</div>
+
+<div class="quiz-grid">
+
+    <!-- FÍSICA -->
+    <div class="quiz-card">
+        <img src="{{ url_for('static', filename='imagens/fisica.png') }}" alt="Quiz Física">
+        <h2>Física</h2>
+        <p>Ondas e movimentos</p>
+
+        <ul class="quiz-links">
+            <li>
+                <a href="https://quizlet.com/br/890503513/fisica-ondulatoria-fisica-questoes-dos-exames-passados-de-ciencias-da-natureza-e-suas-tecnologias-do-enem-flash-cards/"
+                   target="_blank">
+                    Ondulatória (Quizlet)
+                </a>
+            </li>
+
+            <li>
+                <a href="https://quizlet.com/br/891969338/cinematica-fisica-questoes-dos-exames-passados-de-ciencias-da-natureza-e-suas-tecnologias-do-enem-flash-cards/"
+                   target="_blank">
+                    Cinemática (Quizlet)
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- MATEMÁTICA -->
+    <div class="quiz-card">
+        <img src="{{ url_for('static', filename='imagens/matematica.png') }}" alt="Quiz Matemática">
+        <h2>Matemática</h2>
+        <p>Porcentagem e geometria</p>
+
+        <ul class="quiz-links">
+            <li>
+                <a href="https://quizlet.com/br/530919162/porcentagem-flash-cards/"
+                   target="_blank">
+                    Porcentagem (Quizlet) 
+                </a>
+            </li>
+
+            <li>
+                <a href="https://quizlet.com/br/374397256/geometria-plana-flash-cards/"
+                   target="_blank">
+                    Geometria plana (Quizlet)
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+{% endblock %}
